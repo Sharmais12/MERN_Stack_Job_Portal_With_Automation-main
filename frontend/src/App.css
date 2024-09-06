@@ -17,7 +17,7 @@ input::-webkit-outer-spin-button {
 .btn,
 .black_btn,
 .outline_btn {
-  background: #dfdf07;
+  background: cyan;
   color: #111;
   font-weight: 500;
   border: none;
@@ -72,17 +72,26 @@ input::-webkit-outer-spin-button {
   transition: 0.3s;
   cursor: pointer;
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgb(133, 133, 133);
   padding: 20px 110px;
   align-items: center;
+  gap: 20%;
+  background-color: transparent; /* Keep this transparent */
+  position: absolute; /* Make it overlay on the hero section */
+  width: 100%; /* Ensure the navbar spans the full width */
+  top: 0; /* Position it at the top */
+  z-index: 10; /* Ensure it stays on top of the hero background */
+  border: none;
+  outline: none;
 }
+
 .navbar .hamburger {
   display: none;
 }
+
 .navbar .logo {
   flex: 1;
   display: flex;
@@ -105,15 +114,19 @@ input::-webkit-outer-spin-button {
 .navbar .links ul {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 2rem;
+
 }
 .navbar .links ul li {
   list-style-type: none;
 }
 .navbar .links ul li a {
   text-decoration: none;
-  color: #444;
+  color: cyan;
   transition: 0.3s;
+  font-size:1.2rem;
+  font-weight: 30%;
+  gap:2rem;
 }
 .navbar .links ul li a:hover {
   color: #df0793;
@@ -335,26 +348,54 @@ footer div ul a span {
   }
 }
 
-.hero {
-  min-height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 1700px;
-  max-width: 1700px;
-  margin: 0 auto;
-  gap: 50px;
-}
+  .hero{ 
+    height:  100vh; /* Full viewport height */
+  background-image: url('pp.jpg'); /* Replace with your image URL */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-size: cover; /* Make the background image cover the section */
+  background-position: center; /* Center the image */
+  display: flex; /* Flexbox for aligning content */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  color: white; /* Text color for better visibility */
+  padding: 20px; /* Optional padding */
+  }
+
 .hero h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
+  /*font-size: 3rem;
+  text-transform: uppercase;*/
   font-weight: 700;
-}
+  background-image: linear-gradient(
+          -225deg,
+          #dddded 0%,
+          #090a09 29%,
+          #e60737 67%,
+          #09a6e5 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 1s linear infinite;
+        display: inline;
+            font-size: 3rem;
+        }
+      
+      @keyframes textclip {
+        to {
+          background-position: 200% center;
+        }
+        }
+
 .hero h4 {
   font-size: 1.5rem;
   font-weight: 500;
-  color: gray;
+  color: black;
 }
 .hero .box {
   max-width: 900px;
@@ -399,11 +440,12 @@ footer div ul a span {
   max-width: 1700px;
   margin: 0 auto;
   gap: 50px;
+
 }
 .services h3 {
   font-size: 1.75rem;
   font-weight: 600;
-  color:#df07bc;
+  color:black;
   text-transform: uppercase;
 }
 .services .grid {
@@ -422,8 +464,9 @@ footer div ul a span {
   transition: 0.3s;
 }
 .services .grid .card:hover {
-  background: #dfdf07;
-  color: #111;
+  background: cyan;
+        color: #081b08;
+        box-shadow: 0 0 25px cyan, 0 0 50px cyan;
   transition: 0.3s;
 }
 .services .grid .card h4 {
@@ -519,6 +562,9 @@ footer div ul a span {
   max-width: 1500px;
   margin: 0 auto;
   min-height: 100vh;
+  margin-top: 5%;
+  background-color: #F7F7F7;
+  
 }
 .authPage .container {
   flex: 1;
@@ -539,6 +585,7 @@ footer div ul a span {
 }
 .authPage .container .header h3 {
   font-size: 1.6rem;
+  
 }
 .authPage .container .header img {
   width: 300px;
@@ -656,6 +703,20 @@ footer div ul a span {
     display: none;
   }
 }
+.login-image {
+  flex: 1;
+  background-color: #eeeeee; /* Optional: Background color for image section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image img {
+  width: 100%;
+  height:auto;
+  
+}
+
 
 .jobs {
   padding: 40px 100px;

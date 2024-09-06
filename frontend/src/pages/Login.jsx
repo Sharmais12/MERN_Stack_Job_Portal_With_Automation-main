@@ -42,6 +42,7 @@ const Login = () => {
     <>
       <section className="authPage">
         <div className="container login-container">
+       
           <div className="header">
             <h3>Login to your account</h3>
           </div>
@@ -87,6 +88,9 @@ const Login = () => {
             <Link to={"/register"}>Register Now</Link>
           </form>
         </div>
+        <div className="login-image">
+            <img src="l.png" alt="Login Illustration" />
+          </div>
       </section>
     </>
   );
