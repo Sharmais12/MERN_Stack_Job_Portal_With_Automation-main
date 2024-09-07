@@ -35,6 +35,10 @@ Job Page
 
 ![Job2](https://github.com/user-attachments/assets/295eef64-071e-4426-89e8-2b96bc55850c)
 
+Footer Page
+![footer](https://github.com/user-attachments/assets/a1c5c940-84bb-40ed-a76e-ac18f4c52df1)
+
+
 
 
 
